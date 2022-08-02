@@ -1,0 +1,34 @@
+.main--header {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 65%;
+    bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 700% 1000%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: var(--color--secondary--light--2);
+    z-index: 1;
+    @include respond(tab-port) {
+      height: 65%;
+      width: 55%;
+    }
+  }
+}
+
+header {
+  background-color: var(--color--primary--light);
+  position: relative;
+  z-index: 100;
+  border-bottom: 0.1rem solid var(--color--primary--dark--1);
+}

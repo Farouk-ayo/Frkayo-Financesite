@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  // border: 1px solid red;
+}
+html {
+  font-size: 62.5%;
+  @include respond(tab-land1) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-land2) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+body {
+  box-sizing: border-box;
+  padding: 2rem 2rem;
+  // margin-right: 0rem;
+  overflow-x: hidden !important;
+  position: absolute;
+  background-color: #f3f3f3;
+  max-height: 100%;
+  width: 100%;
+  // font-family: $font-primary;
+  font-family: $font-secondary;
+  @include respond(tab-port) {
+    padding: 2rem 2rem;
+  }
+  @include respond(phone2) {
+    padding: 0rem 0rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 65%;
+    height: 105%;
+    width: 100vw;
+    background-color: var(--color--primary--dark--1);
+    border-radius: 40%;
+    transform-origin: bottom;
+    transform: translateY(-55%);
+    z-index: 0;
+  }
+}
+main {
+  color: #444;
+}
+
+.shapes {
+  position: absolute;
+  height: 5.3rem;
+  right: 1%;
+  width: 11rem;
+  border-radius: 50% 50% 0 0/100% 100% 0 0;
+  transform: rotate(90deg);
+  z-index: -1;
+  &__1 {
+    top: 10%;
+    background-color: var(--color--secondary--light--2);
+  }
+
+  &__2 {
+    bottom: 10%;
+    background-color: var(--color--secondary--light);
+  }
+  &__3 {
+    left: 1%;
+    right: 0%;
+    bottom: 10%;
+    background-color: var(--color--secondary--dark);
+    transform: rotate(270deg);
+  }
+  @include respond(tab-port) {
+    display: none;
+  }
+}

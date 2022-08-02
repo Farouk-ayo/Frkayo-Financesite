@@ -1,0 +1,167 @@
+.about--section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  background-image: conic-gradient(
+    var(--color--primary--light) 20deg,
+    transparent
+  );
+  background-color: #f3f3f3;
+  align-items: center;
+  padding-top: 6rem;
+  color: #444;
+}
+
+.about {
+  display: grid;
+  justify-items: left;
+  margin: 1rem 4rem;
+  align-content: center;
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  article {
+    font-size: 1.5rem;
+  }
+  &__service {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  &__do {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+}
+
+.read--more {
+  font-size: 2rem;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.sponsored {
+  display: flex;
+  padding: 3rem 0;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f3f3f3;
+  @include respond(phone2) {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  &__text {
+    padding: 3rem;
+    h3 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  &--heading {
+    @include whitespace;
+    display: flex;
+    background-color: #f3f3f3;
+    @include respond(phone2) {
+      gap: 2rem;
+      &__1 {
+        flex-direction: column;
+      }
+      &__2 {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      @include respond(phone2) {
+        width: 100%;
+      }
+      justify-content: center;
+      gap: 3rem;
+      align-items: center;
+      padding-left: 3rem;
+      color: #444;
+
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
+
+    &__image {
+      width: 70%;
+    }
+    &__imagecon {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      @include respond(phone2) {
+        width: 100%;
+      }
+    }
+  }
+}
+.featured {
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem;
+  @include respond(phone2) {
+    padding: 1rem;
+  }
+}
+.featured--img {
+  width: 10rem;
+  height: 8rem;
+  @include respond(phone2) {
+    width: 7rem;
+    height: 6rem;
+  }
+}
+
+.stack--section {
+  // @include whitespace;
+  background-color: rgba(255, 255, 255, 0.507);
+  padding: 5rem 4rem;
+  margin-top: 2rem;
+}
+
+.stack--heading {
+  @include heading;
+  text-align: center;
+  padding: 0 15rem;
+  @include respond(phone2) {
+    padding: 0;
+  }
+}
+
+.stack--overview {
+  margin-top: 3rem;
+  display: flex;
+  @include respond(phone2) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.stack--overview--content {
+  width: 90%;
+  display: flex;
+  h3 {
+    font-size: 1.7rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+  &__text {
+    margin-left: 1rem;
+  }
+}

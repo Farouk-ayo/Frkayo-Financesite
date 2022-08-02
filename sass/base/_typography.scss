@@ -1,0 +1,78 @@
+.header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-content: left;
+  z-index: 200;
+  margin: 5rem 0 0 2rem;
+  @include respond(tab-port) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    // align-items: center;
+    // margin-left: 0;
+  }
+
+  &__text {
+    font-size: 4rem;
+    color: black;
+    line-height: 4.5rem;
+    position: relative;
+    @include respond(tab-port) {
+      width: 70%;
+    }
+  }
+  p {
+    color: black;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+  }
+  span {
+    display: block;
+    @include respond(tab-port) {
+      display: inline-block;
+    }
+  }
+}
+
+.email {
+  padding: 1rem 1rem;
+  width: 60%;
+  border-radius: 4rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.555);
+  @include respond(tab-port) {
+    width: 60%;
+    padding: 1.5rem 1rem;
+  }
+
+  &:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.582);
+  }
+
+  &:target {
+    background-color: black;
+  }
+  // &::-webkit-input-placeholder {
+  // }
+}
+.footer--email {
+  width: 90%;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  p {
+    @include respond(tab-port) {
+      font-size: 1.4rem;
+    }
+  }
+}
+.checkbox {
+  margin-right: 1rem;
+  accent-color: var(--color--primary--dark--solid);
+  color: black;
+}

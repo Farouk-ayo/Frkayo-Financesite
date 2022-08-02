@@ -1,0 +1,201 @@
+.business {
+  position: relative;
+  z-index: 300;
+  width: 100%;
+  
+  &__gallery {
+    @include respond(tab-port) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.pics {
+  transform: skew(2deg, 4deg);
+  border-radius: 1rem;
+  border: 0.2rem solid var(--color--primary--dark--1);
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  box-shadow: 1rem -1.5rem 0.1rem #1e90af57;
+  background-size: cover;
+  width: 21rem;
+  height: 16.8rem;
+  top: 15%;
+  left: 10%;
+  @include respond(phone2) {
+    transform: skew(2deg, 4deg) scale(0.6);
+    top: 4%;
+    left: 0;
+  }
+
+  &__text {
+    transform: skew(2deg, 4deg);
+    background-color: white;
+    border-radius: 0.3rem;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    @include respond(phone2) {
+      transform: skew(2deg, 4deg) scaleX(0.7) scaleY(0.9);
+    }
+    h6 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    p {
+      line-height: 1rem;
+      font-size: 1rem;
+      padding-bottom: 0.2rem;
+    }
+    &__1 {
+      width: 6rem;
+      height: 1.6rem;
+      top: 5%;
+      left: 35%;
+      color: var(--color--secondary--light);
+      background-color: var(--color--secondary--light--1);
+    }
+    &__2 {
+      width: 10rem;
+      height: 4rem;
+      top: 13%;
+      left: 52%;
+      z-index: 2;
+      @include respond(phone2) {
+        left: 47%;
+      }
+    }
+
+    &__3 {
+      width: 10rem;
+      height: 4rem;
+      top: 28%;
+      left: 52%;
+      @include respond(phone2) {
+        left: 47%;
+      }
+    }
+    &__4 {
+      width: 6rem;
+      height: 1.6rem;
+      top: 35%;
+      left: 72%;
+      color: var(--color--secondary--dark);
+      background-color: var(--color--secondary--dark--2);
+      @include respond(phone2) {
+        left: 74%;
+      }
+    }
+    &__5 {
+      width: 24rem;
+      height: 10rem;
+      top: 48%;
+      left: 52%;
+      @include respond(phone2) {
+        left: 42%;
+        top: 45%;
+      }
+
+      .bg--btn {
+        background-color: var(--color--primary--dark--1);
+        color: white;
+        border-radius: 2rem;
+        border: none;
+      }
+      .nobg--btn {
+        background-color: white;
+        color: var(--color--primary--dark--2);
+        border: 0.2rem solid var(--color--primary--dark--1);
+        border-radius: 3rem;
+      }
+    }
+    &__6 {
+      width: 18rem;
+      height: 6rem;
+      top: 62%;
+      left: 18%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      @include respond(phone2) {
+        left: 5%;
+        top: 54%;
+      }
+      .logo--left {
+        margin-right: 1rem;
+      }
+    }
+    &__7 {
+      width: 10rem;
+      height: 3rem;
+      top: 80%;
+      left: 32%;
+      background-color: rgb(255, 255, 255);
+    }
+    &__translate {
+      position: absolute;
+      background-color: transparent;
+      border: 0.1rem solid var(--color--primary--dark--1);
+      border-radius: 0.5rem;
+      z-index: -1;
+      transform: translate(1rem, -0.5rem) skew(2deg, 4deg);
+      @include respond(phone2) {
+        transform: translate(1rem, -0.5rem) skew(2deg, 4deg) scaleX(0.7)
+          scaleY(0.9);
+      }
+    }
+  }
+}
+.gallery--btn {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  border-top: 0.1rem solid var(--color--layout);
+  & > * {
+    margin: 1.1rem 0.5rem;
+  }
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+.dollar {
+  color: var(--color--primary--dark--2);
+}
+
+.figure {
+  position: relative;
+  height: 40rem;
+  width: 60rem;
+
+  @include respond(tab-port) {
+    transform: scale(1.1);
+  }
+  @include respond(phone3) {
+    transform: scale(1);
+  }
+  @include respond(phone2) {
+    margin-left: -3rem;
+    width: 35rem;
+    height: 30rem;
+  }
+}
+.caption {
+  position: absolute;
+  font-size: 4rem;
+  color: white;
+  top: 8%;
+  left: 13%;
+  transform: skew(2deg, 4deg);
+}

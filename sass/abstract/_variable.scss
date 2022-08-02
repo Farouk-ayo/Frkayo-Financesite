@@ -1,0 +1,28 @@
+:root {
+  --color--primary--dark: #f6b132;
+  --color--primary--dark--lighter: #cf7500;
+
+  --color--primary--dark--2: #37b7b5;
+  --color--primary--dark--1: #1c829e;
+
+  --color--primary--light: #c4ddff;
+  --color--primary--light--lighter: #a0e4e0;
+
+  --color--secondary--light: #3b9103;
+  --color--secondary--light--1: #e2f3d5;
+  --color--secondary--light--2: #ffbe00;
+  --color--secondary--light--3: #ffe41b;
+  --color--secondary--light--4: #f0a500;
+
+  --color--secondary--dark--2: #fdc1c1;
+  --color--secondary--dark: #8f0e0e;
+
+  --color--layout: #f7f6de;
+  --color--layout--dark: #79dae8;
+
+  --color--primary--dark--solid: #fa7e0a;
+}
+
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+$font-secondary: "Poppins", sans-serif;

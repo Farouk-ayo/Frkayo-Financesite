@@ -1,0 +1,84 @@
+.testimonial--heading {
+  @include h1Tag;
+  width: 70%;
+  margin: auto;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: black;
+  }
+  p {
+    font-size: 3rem;
+  }
+}
+.test {
+  width: 100%;
+}
+
+.testimonial {
+  display: flex;
+  overflow: hidden;
+  gap: 2rem;
+
+  &--section--slider {
+    display: flex;
+    width: 37rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 5rem;
+    padding: 3rem 2rem;
+    gap: 10rem;
+    @include respond(phone3) {
+      width: 25rem;
+    }
+    blockquote {
+      font-size: 1.7rem;
+      position: relative;
+      padding-top: 10rem;
+      &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2rem;
+        font-size: 10rem;
+      }
+    }
+    address {
+      h6 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  &--section--slider__1 {
+    background-color: #c4ddff;
+    border-top-right-radius: 10rem;
+    align-items: flex-end;
+  }
+  &--section--slider__2 {
+    background-color: #f0a500;
+    color: black;
+    border-bottom-right-radius: 10rem;
+    align-items: flex-start;
+  }
+  &--section--slider__3 {
+    background-color: #c4ddff;
+    border-top-right-radius: 10rem;
+    align-items: flex-end;
+  }
+  &--section--slider__4 {
+    background-color: #f0a500;
+    color: black;
+    border-bottom-right-radius: 10rem;
+    align-items: flex-start;
+  }
+  &--section--slider__5 {
+    background-color: #f0a500;
+    color: black;
+    border-bottom-right-radius: 10rem;
+    align-items: flex-start;
+  }
+}

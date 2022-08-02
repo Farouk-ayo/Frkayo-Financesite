@@ -1,0 +1,52 @@
+.navs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+
+  &__list {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    width: 20rem;
+
+    @include respond(phone2) {
+      display: none;
+    }
+  }
+  &__items {
+    list-style: none;
+  }
+  &__link {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: var(--color--primary--dark--1);
+    }
+  }
+
+  &__login {
+    margin: 1rem;
+    @include respond(phone2) {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  font-size: 2rem;
+  margin: 1rem 1rem;
+  color: var(--color--primary--dark--1);
+  align-items: center;
+  font-family: "Tangerine", cursive;
+  // font-family: $font-display;
+  font-style: italic;
+}
+.icon--logo {
+  font-size: 3rem;
+  color: var(--color--primary--dark--1);
+}

@@ -1,0 +1,153 @@
+.icon {
+  color: black;
+  width: 6rem;
+  margin-bottom: 0.5rem;
+  @include respond(phone2) {
+    position: relative;
+    top: -0.7rem;
+  }
+}
+
+.logo {
+  width: 7rem;
+  height: 7rem;
+}
+.subscribe--2 {
+  display: none;
+  @include respond(tab-port) {
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+    margin-bottom: 3rem;
+    padding-left: 3rem;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.subscribe--1 {
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+.subscribe2 {
+  @include respond(tab-land1) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.social--icons {
+  display: flex;
+  gap: 2rem;
+}
+
+.icons {
+  width: 3rem;
+  height: 3rem;
+  &:hover {
+    fill: var(--color--primary--light);
+  }
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(4px);
+  z-index: 1051;
+  transition: all 0.3s;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.square--icon {
+  width: 1.2rem;
+}
+
+.logo--left {
+  padding: 0.3rem;
+  background-color: var(--color--secondary--dark--2);
+  width: 6rem;
+  height: 4rem;
+  position: relative;
+  color: #444;
+
+  h5 {
+    font-size: 3.5rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 0rem;
+  }
+}
+
+.arrow--img {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--color--secondary--light--2);
+}
+
+.dots {
+  position: absolute;
+  // bottom: 5%;
+  // left: 50%;
+  // transform: translateX(-50%);
+  display: flex;
+  background-color: red;
+}
+
+section {
+  transform: none;
+  transition: all 1s;
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+.section--left {
+  opacity: 0;
+  transform: translateX(8rem);
+}
+.section--right {
+  opacity: 0;
+  transform: translateX(-8rem);
+}
+
+.sticky {
+  position: absolute;
+  position: fixed;
+  background-color: #f3f3f3;
+  top: 0;
+  width: 96.8%;
+}
+
+// .spinner {
+//   margin: auto;
+//   position: fixed;
+//   z-index: 1000;
+// }
+// .spinner {
+//   .svg {
+//     height: 6rem;
+//     width: 6rem;
+//     animation: rotate 2s infinite linear;
+//   }
+// }
+
+// @keyframes rotate {
+//   0% {
+//     transform: rotate(0);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
